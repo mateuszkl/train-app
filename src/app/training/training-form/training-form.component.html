@@ -2,14 +2,20 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet'
+        type='text/css'>
   <title></title>
 </head>
 
 <body>
 <div class="jumbotron">
   <div class="container">
-    <p>Training form build in progress</p>
+    <form #trainingForm="ngForm" (ngSubmit)="submitTraining(trainingForm.form);">
+      <input type="text"
+             class="form-control"
+             name="training-name">
+      <button class="btn btn-primary" [disabled]="!trainingForm.valid">Save</button>
+    </form>
   </div>
 </div>
 </body>

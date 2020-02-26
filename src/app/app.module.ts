@@ -8,8 +8,9 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {RouterModule} from '@angular/router';
 import {TrainingFormComponent} from './training/training-form/training-form.component';
 import {NotFoundComponent} from './not-found-component/not-found.component';
-import { TrainingListComponent } from './training-list/training-list.component';
+import {TrainingListComponent} from './training-list/training-list.component';
 import {TrainingService} from './training-list/training.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {TrainingService} from './training-list/training.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot([
       {
         path: '',

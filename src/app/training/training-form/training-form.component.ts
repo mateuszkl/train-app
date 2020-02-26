@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-training-form',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainingFormComponent implements OnInit {
 
-  constructor() { }
+  submitTraining(form) {
+    // todo implement saving form
+    console.log(form.value);
+    alert('The form was submitted');
+    form.reset();
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
