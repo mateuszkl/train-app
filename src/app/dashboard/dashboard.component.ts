@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {DashboardService} from './dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,11 +6,5 @@ import {DashboardService} from './dashboard.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-
-  trainings;
-
-  constructor(service: DashboardService) {
-    this.trainings = service.getTrainings();
-  }
 
 }

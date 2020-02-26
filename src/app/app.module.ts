@@ -5,10 +5,11 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {DashboardService} from './dashboard/dashboard.service';
 import {RouterModule} from '@angular/router';
 import {TrainingFormComponent} from './training/training-form/training-form.component';
 import {NotFoundComponent} from './not-found-component/not-found.component';
+import { TrainingListComponent } from './training-list/training-list.component';
+import {TrainingService} from './training-list/training.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {NotFoundComponent} from './not-found-component/not-found.component';
     NavbarComponent,
     DashboardComponent,
     TrainingFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TrainingListComponent
   ],
   imports: [
     BrowserModule,
@@ -31,13 +33,17 @@ import {NotFoundComponent} from './not-found-component/not-found.component';
         component: TrainingFormComponent
       },
       {
+        path: 'trainings',
+        component: TrainingListComponent
+      },
+      {
         path: '**',
         component: NotFoundComponent
       },
     ])
   ],
   providers: [
-    DashboardService
+    TrainingService
   ],
   bootstrap: [AppComponent]
 })

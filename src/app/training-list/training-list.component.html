@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <div class="container">
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Duration in minutes</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let training of trainings; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ training.name }}</td>
+        <td>{{ training.durationInMinutes }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
