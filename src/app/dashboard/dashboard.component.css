@@ -1,0 +1,15 @@
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.jumbotron h2 {
+  float: left;
+  font-size: 52px;
+  color: #333;
+  padding: 70px 60px;
+}
