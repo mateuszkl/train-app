@@ -28,6 +28,11 @@ import {FormsModule} from '@angular/forms';
     RouterModule.forRoot([
       {
         path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
         component: DashboardComponent
       },
       {

@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+/*GENERAL*/
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: #edc061;
+  color:black;
+}
+
+html, body {
+  margin: 0;
+  padding-top: 10px;
+  font-family: 'Libre Baskerville', sans-serif;
+  background-color: black;
+}
+
+/*NAVBAR*/
+
+#logo {
+  height: 65px;
+}
+
+.nav li{
+  display: inline-block;
+}
+
+.nav ul {
+  margin: 0 0 0 0;
+}
+
+.nav {
+  margin: 10px 0 0 0;
+}
+
+.nav li a {
+  color: #FEFEFE;
+}
+
+.nav li a:hover {
+  background-color: #FEBF45;
+  color:black;
+  border-radius: 3px;
+}
+
+.nav .active {
+  background-color: #FEBF45;
+  color:black;
+  border-radius: 3px;
+}
+
+/*ERRORS*/
+
+.form-control.ng-invalid.ng-touched {
+  border: 2px solid red;
+}

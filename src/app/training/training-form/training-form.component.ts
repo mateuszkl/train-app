@@ -7,12 +7,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TrainingFormComponent implements OnInit {
 
-  submitTraining(form) {
-    // todo implement saving form
-    console.log(form.value);
-    alert('The form was submitted');
-    form.reset();
-  }
+  // submitTraining(form) {
+  //   // todo implement saving form
+  //   console.log(form.value);
+  //   alert('The form was submitted');
+  //   form.reset();
+  // }
 
   constructor() {
   }
