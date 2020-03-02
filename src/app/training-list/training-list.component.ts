@@ -14,7 +14,7 @@ export class TrainingListComponent implements OnInit {
     this.trainings = service.getTrainings();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
