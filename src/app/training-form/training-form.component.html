@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <div class="container">
+    <form [formGroup]="trainingForm" (ngSubmit)="onSubmit(trainingForm)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input required id="name" type="text" class="form-control" formControlName="trainingName">
+        <div class="alert alert-danger" *ngIf="!trainingForm.get('trainingName').valid && trainingForm.get('trainingName').touched">Training name is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="durationInMinutes">Duration (in minutes)</label>
+        <input required id="durationInMinutes" class="form-control" formControlName="durationInMinutes"/>
+        <div class="alert alert-danger" *ngIf="!trainingForm.get('durationInMinutes').valid && trainingForm.get('durationInMinutes').touched">Duration time is required</div>
+      </div>
+
+      <button class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>

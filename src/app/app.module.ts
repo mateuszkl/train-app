@@ -6,10 +6,11 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {RouterModule} from '@angular/router';
-import {TrainingFormComponent} from './training/training-form/training-form.component';
+import {TrainingFormComponent} from './training-form/training-form.component';
 import {NotFoundComponent} from './not-found-component/not-found.component';
-import { TrainingListComponent } from './training-list/training-list.component';
+import {TrainingListComponent} from './training-list/training-list.component';
 import {TrainingService} from './training-list/training.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,16 @@ import {TrainingService} from './training-list/training.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
         component: DashboardComponent
       },
       {
