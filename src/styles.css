@@ -11,6 +11,7 @@
 
 .jumbotron {
   background-color: #edc061;
+  min-height: 780px;
   color:black;
 }
 
